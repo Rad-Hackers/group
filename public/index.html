@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>دليل الكروبات</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div class="brand-wrap">
+        <div class="brand-icon"></div>
+        <div>
+          <h1>دليل الكروبات</h1>
+          <p>موقع كامل مع قاعدة بيانات ولوحة أدمن</p>
+        </div>
+      </div>
+      <div class="top-right">
+        <span class="chip" id="developerChip">المطور: ...</span>
+        <span class="chip" id="identityChip">👤 زائر</span>
+        <span class="chip" id="roleChip">🔒 مستخدم</span>
+      </div>
+    </header>
+
+    <section class="announce glass hidden" id="broadcastCard">
+      <div class="announce-title">📣 إعلان عام</div>
+      <div id="broadcastText"></div>
+    </section>
+
+    <main class="layout">
+      <section class="panel glass" id="screen"></section>
+
+      <aside class="panel glass sidebar">
+        <h2>الدخول والإعداد</h2>
+        <p class="muted">سجل اسمك مرة واحدة، وبعدها تقدر تضيف وتبحث. الأدمن يدخل بواسطة المعرف المخصص.</p>
+
+        <div class="divider"></div>
+
+        <label>الاسم</label>
+        <input id="nameInput" placeholder="مثال: أحمد" />
+
+        <label>اليوزر (اختياري)</label>
+        <input id="usernameInput" placeholder="مثال: my_user" />
+
+        <button class="btn primary" id="saveIdentityBtn">حفظ الهوية</button>
+
+        <div class="divider"></div>
+
+        <label>معرّف الأدمن</label>
+        <input id="adminIdInput" placeholder="7201745912 أو 1523406780" />
+
+        <div class="button-row">
+          <button class="btn success" id="adminLoginBtn">دخول أدمن</button>
+          <button class="btn" id="adminLogoutBtn">خروج</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="notice">
+          <strong>معلوماتك الحالية</strong>
+          <div class="info-grid" id="currentInfo"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
